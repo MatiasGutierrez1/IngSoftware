@@ -28,3 +28,5 @@ const app = new Vue({
     }
   }
 })
+
+
