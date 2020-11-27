@@ -18,26 +18,68 @@
   <script>
 
   Vue.component('titulo',{
-    template: //html
+    template: 
     `
     <div>
-      <h1>numero</h1>
-      <hijo><hijo>
+      <h1>numero {{ numero }}</h1>
+      <hijo></hijo>
     </div>  
-    `
-  });
+    `,
+    computed:{
+      ...Vuex.mapState(['numero'])
+    }
+  }); 
   
   Vue.component('hijo',{
-    template: //html
+    template: 
     `
     <div>
-      <button>+</button>
+      <button @click="aumentar">+</button>
+      <button @click="disminuir(2)">-</button>
+      <button @click="obtenerCursos">Obtener Cursos</button>
+      <h1>numero {{ numero }}</h1>
+      <ul v-for="item of cursos">
+        <li>{{item.nombre}}</li>
+      </ul>  
     </div>  
-    `
-  })
+    `,
+    computed:{
+      ...Vuex.mapState(['numero','cursos'])
+    },
+    methods:{
+      ...Vuex.mapMutations(['aumentar','disminuir']),
+      ...Vuex.mapActions(['obtenerCursos'])
+    } 
+  });
+
+  const store = new Vuex.Store({
+    state: {
+      numero: 300,
+      cursos: []
+    },
+    mutations: {
+      aumentar(state){
+        state.numero++
+      },
+      disminuir(state,n){
+        state.numero -= n
+      },
+      llenarCursos(state, cursosAccion){
+        state.cursos = cursosAccion
+      }
+    },
+    actions: {
+      obtenerCursos: async function ({commit}){
+        const data = await fetch('cursos.json');
+        const cursos = await data.json();
+        commit('llenarCursos', cursos)
+      }
+    }
+  });
 
   new Vue({
-    el:'#app'
+    el:'#app',
+    store: store
   })
 
   </script>
