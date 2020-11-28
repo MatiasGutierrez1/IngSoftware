@@ -1,0 +1,19 @@
+*Insertar datos a Usuarios
+insert into usuarios (TipoU, Nombre, Rut, Telefono, Correo, Puntos)
+values ('gerente','Seba','18346581','956231481','creandolodbseba@mgmail.com','0');
+
+*Insertar datos a Tarea
+insert into tareas (idTrabajador, idRegistroT, idPlanificador, Nombre, Prioridad, Descripcion, Puntos, Estado, FechaLimite)
+values ('4','1','3','Desarrollar modulos','Alta','Desarrollar el modulo para canjear premios', '3000', 'Pendiente', '2020-12-3');
+
+*Insertar datos a premio
+insert into premios (Nombre, Descripcion, Puntos, Disponibilidad)
+values ('Viaje a cancun','Un viaje para dos personas a cancun por ...','5000','1');
+
+*Insertar datos a registro_premio
+insert into registro_premio (idPremio, idUsuario, CantidadPuntos, Descripcion, Fecha)
+values ('1','5','5000','Se canjeo un viaje a cancún por 5000 puntos','2020-12-20');
+
+*Insertar datos a registro_tarea
+insert into registro_tarea ( idTrabajador, idPlanificador, idTarea, CantidadPuntos, Descripcion, Fecha)
+values ('5','3','1','3000','Se completo la tarea desarrollar un modulo por el trabajador X','2020-12-10');
