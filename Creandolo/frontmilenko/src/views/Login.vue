@@ -1,28 +1,50 @@
 <template>
 <body class="fondo">
   <div class="login">
+    <img alt="Vue logo" src="./logo.png" class="logo">
     <h1 class="title">Inicio de sesion</h1>
-    <form action class="form">
+    <form action class="form" @submit.prevent="login">
       <label class="form-label" for="#email">Email:</label>
-      <input class="form-input" type="email" id="email" required placeholder="Email">
+      <input
+      v-model="email" 
+      class="form-input" 
+      type="email" 
+      id="email" 
+      required placeholder="Email"
+      >
       <label class="form-label" for="#password">Password:</label>
-      <input class="form-input" type="password" id="password" placeholder="Password">
+      <input
+      v-model="password"
+      class="form-input" 
+      type="password" 
+      id="password" 
+      placeholder="Password">
+      <p v-if="error" class="error">Has introducido mal el email o la contraseña.</p>
       <input class="form-submit" type="submit" value="Login">
     </form>
+  </div>
+  <div id="nav">
+  <router-link to="/HomeT">Entrar al Home secreto xd</router-link>
   </div>
 </body>
 </template>
 
 <script>
+import auth from "@/confirmar/auth";
 export default {
   data: () => ({
     email: "",
-    password: ""
+    password: "",
+    error: false
   }),
   methods: {
-    login() {
-      console.log(this.email);
-      console.log(this.password);
+    async login() {
+      try {
+        await auth.login(this.email, this.password);
+        this.$router.push("/HomeT");
+      } catch (error) {
+        this.error = true;
+      }
     }
   }
 };
@@ -33,11 +55,21 @@ export default {
 
 <style lang="scss" scoped>
 
+.logo {
+  max-width: 20%;
+
+}
+.error{
+  margin: 1rem 0 0;
+  color:rgb(146, 11, 11);
+
+
+}
 .fondo{
   background-size: 100px 100px;
   background-size: 100% 100%;
- background-image: url("backgraund.jpg");
- background-color: #ffffff;
+  background-image: url("backgraund.jpg");
+  background-color: #ffffff;
 
 }
 .login {
@@ -62,7 +94,7 @@ export default {
 }
 .form-label {
   margin-top: 2rem;
-  color: rgb(153, 76, 140);
+  color: rgb(140, 51, 175);
   margin-bottom: 0.5rem;
   &:first-of-type {
     margin-top: 0rem;
