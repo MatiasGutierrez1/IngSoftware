@@ -1,4 +1,4 @@
-# frontmati
+# frontmati2
 
 ## Project setup
 ```
