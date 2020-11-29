@@ -4,15 +4,19 @@
       
       <b-container>
 
-        <b-navbar-brand href="#">NavBar</b-navbar-brand>
+        <b-navbar-brand href="/">Home</b-navbar-brand>
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
         <b-collapse id="nav-collapse" is-nav>
 
           <b-navbar-nav>
-            <b-nav-item :to="{name: 'Home'}">Home</b-nav-item>
             <b-nav-item :to="{name: 'about'}">About</b-nav-item>
-            <b-nav-item :to="{name: 'TareasTrabajador'}">Tareas Trabajador</b-nav-item>
+            <b-nav-item :to="{name: 'PremiosTrabajador'}">PremiosTrabajador</b-nav-item>
+            <b-nav-item :to="{name: 'PremiosGestor'}">PremiosGestor</b-nav-item>
+            <b-nav-item :to="{name: 'TareasTrabajador'}">TareasTrabajador</b-nav-item>
+            <b-nav-item :to="{name: 'TareasPlanificador'}">TareasPlanificador</b-nav-item>
+            <b-nav-item :to="{name: 'UsuariosPlanificador'}">UsuariosPlanificador</b-nav-item>
+            <b-nav-item :to="{name: 'UsuariosGestor'}">UsuariosGestor</b-nav-item>
           </b-navbar-nav>
 
         </b-collapse>
@@ -21,9 +25,9 @@
     
     </b-navbar>
 
-    <container>
+    <b-container>
       <router-view/>
-    </container>
+    </b-container>
   </div>
 </template>
 
