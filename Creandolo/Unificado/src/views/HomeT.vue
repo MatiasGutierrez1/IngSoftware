@@ -13,7 +13,7 @@
       <b-navbar-nav>
         <b-nav-item :to="{name: 'PremiosTrabajador'}">Premio</b-nav-item>
         <b-nav-item :to="{name: 'TareasTrabajador'}">Tareas</b-nav-item>
-        <b-nav-item href="#" disabled>Ranking</b-nav-item>
+        <b-nav-item :to="{name: 'RankingTrabajador'}">Ranking</b-nav-item>
         <b-nav-item href="#" disabled>Perfil</b-nav-item>
         <b-nav-item :to="{name: 'Login'}">Cerrar sesion</b-nav-item>
       </b-navbar-nav>
