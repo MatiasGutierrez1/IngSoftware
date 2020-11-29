@@ -30,7 +30,6 @@
 </template>
 
 <script>
-import auth from "@/confirmar/auth";
 export default {
   data: () => ({
     email: "",
@@ -38,13 +37,9 @@ export default {
     error: false
   }),
   methods: {
-    async login() {
-      try {
-        await auth.login(this.email, this.password);
-        this.$router.push("/HomeT");
-      } catch (error) {
-        this.error = true;
-      }
+    login() {
+      console.log(this.email);
+      console.log(this.password);
     }
   }
 };
