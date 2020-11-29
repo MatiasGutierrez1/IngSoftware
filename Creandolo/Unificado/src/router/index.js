@@ -67,7 +67,11 @@ const routes = [
     path: '/RankingTrabajador',
     name: 'RankingTrabajador',
     component: () => import('../views/RankingTrabajador.vue')
-
+  },
+  {
+    path: '/RankingPlanificador',
+    name: 'RankingPlanificador',
+    component: () => import('../views/RankingPlanificador.vue')
   }
 ]
 
