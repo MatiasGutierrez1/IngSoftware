@@ -5,7 +5,7 @@
 
 <div>
   <b-navbar toggleable="lg" type="dark" variant="dark">
-    <b-navbar-brand :to="{name: 'HomeT'}">Home</b-navbar-brand>
+    <b-navbar-brand :to="{name: 'HomeP'}">Home</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -15,6 +15,7 @@
         <b-nav-item :to="{name: 'TareasTrabajador'}">Tareas</b-nav-item>
         <b-nav-item href="#" disabled>Ranking</b-nav-item>
         <b-nav-item href="#" disabled>Perfil</b-nav-item>
+        <b-nav-item :to="{name: 'UsuariosPlanificador'}">Usuarios</b-nav-item>
         <b-nav-item :to="{name: 'Login'}">Cerrar sesion</b-nav-item>
       </b-navbar-nav>
 
