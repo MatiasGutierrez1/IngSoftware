@@ -12,7 +12,7 @@
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
-        <b-nav-item :to="{name: 'PremiosTrabajador'}">Premio</b-nav-item>
+        <b-nav-item :to="{name: 'PremiosPlanificador'}">Premio</b-nav-item>
         <b-nav-item :to="{name: 'TareasPlanificador'}">Tareas</b-nav-item>
         <b-nav-item :to="{name: 'RankingPlanificador'}">Ranking</b-nav-item>
         <b-nav-item :to="{name: 'PerfilPlanificador'}">Perfil</b-nav-item>
@@ -25,7 +25,115 @@
   </b-navbar>
   </b-container>
 </div>
+<br> <br>
+  <b-container>
+  <div class="py-4 bg-dark text-center">
 
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <b-col cols="6" md="2">
+          <p></p>
+        </b-col>        
+        <b-col cols="6" md="2">
+          <p>Nombre:</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>Juan</p>
+        </b-col>
+                <b-col cols="6" md="2">
+          <p></p>
+        </b-col>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <b-col cols="6" md="2">
+          <p></p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>E-mail:</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>prueba@gmail.com</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p></p>
+        </b-col>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <b-col cols="6" md="2">
+          <p></p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>Telefono:</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>+56921384521</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p></p>
+        </b-col>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <b-col cols="6" md="2">
+          <p></p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>Rut:</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>12.356.345-k</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p></p>
+        </b-col>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <b-col cols="6" md="2">
+          <p></p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>Puntos:</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>1456824</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p></p>
+        </b-col>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <b-col cols="6" md="2">
+          <p></p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>Puntos:</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>1456824</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p></p>
+        </b-col>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <b-col cols="6" md="2">
+          <p></p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p><button>Editar Perfil</button></p>
+        </b-col>
+        <b-col cols="6" md="4">
+          <p><button>Registro de Puntos</button></p>
+        </b-col>
+        <b-col cols="6" md="4">
+          <p><button>Cambiar Contraseña</button></p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p></p>
+        </b-col>
+      </li>
+    </ul>
+  </div>  
+  </b-container>
 </body>
 </template>
 

@@ -44,6 +44,11 @@ const routes = [
     component: () => import( '../views/TareasPlanificador.vue')
   },
   {
+    path: '/TareasGestor',
+    name: 'TareasGestor',
+    component: () => import( '../views/TareasGestor.vue')
+  },
+  {
     path: '/PremiosTrajabador',
     name: 'PremiosTrabajador',
     component: () => import ('../views/PremiosTrabajador.vue')
@@ -52,6 +57,11 @@ const routes = [
     path: '/PremiosGestor',
     name: 'PremiosGestor',
     component: () => import('../views/PremiosGestor.vue')
+  },
+  {
+    path: '/PremiosPlanificador',
+    name: 'PremiosPlanificador',
+    component: () => import('../views/PremiosPlanificador.vue')
   },
   {
     path: '/UsuariosPlanificador',
@@ -72,6 +82,11 @@ const routes = [
     path: '/RankingPlanificador',
     name: 'RankingPlanificador',
     component: () => import('../views/RankingPlanificador.vue')
+  },
+  {
+    path: '/RankingGestor',
+    name: 'RankingGestor',
+    component: () => import('../views/RankingGestor.vue')
   },
   {
     path: '/PerfilTrabajador',

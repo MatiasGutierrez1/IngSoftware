@@ -6,7 +6,7 @@
   <div>
     <b-container>
     <b-navbar toggleable="lg" type="dark" variant="dark">
-      <b-navbar-brand :to="{name: 'HomeT'}">Home</b-navbar-brand>
+      <b-navbar-brand :to="{name: 'HomeP'}">Home</b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 

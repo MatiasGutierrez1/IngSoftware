@@ -19,74 +19,148 @@
         <b-nav-item :to="{name: 'Login'}">Cerrar sesion</b-nav-item>
       </b-navbar-nav>
 
-
     </b-collapse>
   </b-navbar>
   </b-container>
 </div>
+<br> <br>
+  <b-container>
+  <div class="py-4 bg-dark text-center">
 
-   <div class="row">
-     <form  class="form-horizontal form-material">
-       <div class="form-group">
-         <label class="col-md-12">Nombre</label>
-           <div class="col-md-12">
-             <input type="text" class="form-control form-control-line"
-               v-model="user.name">
-             </div>
-           </div>
-           <div class="form-group">
-             <label class="col-md-12">Apellido</label>
-               <div class="col-md-12">
-                 <input type="text" class="form-control form-control-line"
-                   v-model="user.lastname">
-               </div>
-            </div>
-            <div class="form-group">
-              <label class="col-sm-12">Genero</label>
-              <div class="col-sm-12">
-                <select class="form-control form-control-line">
-                  <option>Femenino</option>
-                  <option>Masculino</option>
-                  <option>Otra orientación</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-md-12">Sobre mi</label>
-              <div class="col-md-12">
-                <textarea rows="5" class="form-control form-control-line"
-                 v-model="user.description">
-                </textarea>
-              </div>
-            </div>
-          <div class="col-sm-12">
-            <button class="btn btn-success" 
-              v-on:click="editUser()">Actualizar
-            </button>
-          </div>
-      </form>
-    </div>
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <b-col cols="6" md="2">
+          <p></p>
+        </b-col>        
+        <b-col cols="6" md="2">
+          <p>Nombre:</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>Juan</p>
+        </b-col>
+                <b-col cols="6" md="2">
+          <p></p>
+        </b-col>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <b-col cols="6" md="2">
+          <p></p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>E-mail:</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>prueba@gmail.com</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p></p>
+        </b-col>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <b-col cols="6" md="2">
+          <p></p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>Telefono:</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>+56921384521</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p></p>
+        </b-col>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <b-col cols="6" md="2">
+          <p></p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>Rut:</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>12.356.345-k</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p></p>
+        </b-col>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <b-col cols="6" md="2">
+          <p></p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>Puntos:</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>1456824</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p></p>
+        </b-col>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <b-col cols="6" md="2">
+          <p></p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>Puntos:</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>1456824</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p></p>
+        </b-col>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <b-col cols="6" md="2">
+          <p></p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p><button>Editar Perfil</button></p>
+        </b-col>
+        <b-col cols="6" md="4">
+          <p><button>Registro de Puntos</button></p>
+        </b-col>
+        <b-col cols="6" md="4">
+          <p><button>Cambiar Contraseña</button></p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p></p>
+        </b-col>
+      </li>
+    </ul>
+  </div>  
+  </b-container>
+
 
 
 </body>
 </template>
 <script>
-  import { mdbNavbar, mdbNavItem, mdbNavbarNav, mdbNavbarToggler, mdbContainer, mdbRow, mdbInput, mdbNavbarBrand, mdbIcon } from 'mdbvue';
-  export default {
-    name: 'HamburgerMenuPage',
-    components: {
-      mdbNavbar,
-      mdbNavItem,
-      mdbNavbarNav,
-      mdbNavbarToggler,
-      mdbContainer,
-      mdbRow,
-      mdbInput,
-      mdbNavbarBrand,
-      mdbIcon
+export default {
+  props: ['auth'],
+  data() {
+    return {
+      user: { },
+    }
+  },
+  mounted() {
+    this.user = JSON.parse(this.auth);
+  },
+  methods: {
+    editUser() { }
+  },
+  filters: {
+    moment: function(date) {
+      return moment(date).format("D [de] MMMM [de] YYYY ");
     }
   }
+}
 </script>
+
+
+
 <style lang="scss" scoped>
 
 .logo {
@@ -100,5 +174,16 @@
   background-image: url("backgraund.jpg");
   background-color: #ffffff;
 }
+
+.table {
+    width: 70%;
+    border-spacing: 0 0;
+    background: #22333f;
+    color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    
+  }
+  
 
 </style>
