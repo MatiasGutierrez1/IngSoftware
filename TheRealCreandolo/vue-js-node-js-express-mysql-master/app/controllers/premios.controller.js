@@ -14,7 +14,6 @@ exports.create = (req, res) => {
 
   // Create a Tutorial
   const premios = {
-    id: req.body.id,
     nombre: req.body.nombre,
     descripcion: req.body.descripcion,
     puntos: req.body.nuntos,

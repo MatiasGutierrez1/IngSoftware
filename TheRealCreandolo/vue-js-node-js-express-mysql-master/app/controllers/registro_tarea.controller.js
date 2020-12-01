@@ -14,7 +14,6 @@ exports.create = (req, res) => {
 
   // Create a Tutorial
   const registro_tarea = {
-    id: req.body.id,
     CantidadPuntos: req.body.CantidadPuntos,
     Descripcion: req.body.Descripcion,
     Fecha: req.body.Fecha

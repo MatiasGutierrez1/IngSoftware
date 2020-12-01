@@ -14,7 +14,6 @@ exports.create = (req, res) => {
 
   // Create a Tutorial
   const registro_premio = {
-    id: req.body.id,
     cantidadPuntos: req.body.cantidadPuntos,
     descripcion: req.body.descripcion,
     fecha: req.body.fecha

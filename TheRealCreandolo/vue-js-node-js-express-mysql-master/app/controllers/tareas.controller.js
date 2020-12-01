@@ -14,7 +14,6 @@ exports.create = (req, res) => {
 
   // Create a Tutorial
   const tareas = {
-    id: req.body.id,
     Nombre: req.body.Nombre,
     Prioridad: req.body.Prioridad,
     Descripcion: req.body.Descripcion,

@@ -14,7 +14,6 @@ exports.create = (req, res) => {
 
   // Create a Tutorial
   const usuarios = {
-    id: req.body.id,
     tipoU: req.body.tipoU,
     nombre : req.body.nombre,
     rut: req.body.rut,
