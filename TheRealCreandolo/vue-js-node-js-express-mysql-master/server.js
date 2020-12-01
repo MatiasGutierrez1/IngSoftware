@@ -35,8 +35,8 @@ app.get('/', function (req,res) {
 require("./app/routes/usuarios.routes")(app);
 require("./app/routes/tareas.routes")(app);
 require("./app/routes/premios.routes")(app);
-require("./app/routes/registro_tarea.routes")(app);
-require("./app/routes/registro_premio.routes")(app);
+require("./app/routes/registro_tareas.routes")(app);
+require("./app/routes/registro_premios.routes")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;

@@ -1,5 +1,8 @@
 module.exports = (sequelize, Sequelize) => {
   const Usuarios = sequelize.define("usuarios", {
+    id:{
+      type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true
+    },
     TipoU: {
       type: Sequelize.STRING
     },
@@ -7,7 +10,7 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING
     },
     Rut: {
-      type: Sequelize.STRING
+      type: Sequelize.STRING, Unique: true
     },
     Clave: {
       type: Sequelize.STRING
@@ -20,7 +23,7 @@ module.exports = (sequelize, Sequelize) => {
     },
     Puntos: {
       type: Sequelize.INTEGER
-    }
+    },
   });
 
   return Usuarios;

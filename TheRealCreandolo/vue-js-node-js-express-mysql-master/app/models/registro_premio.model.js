@@ -1,5 +1,8 @@
 module.exports = (sequelize, Sequelize) => {
   const Registro_premio = sequelize.define("registro_premio", {
+    id: {
+      type: Sequelize.INTEGER, primaryKey: true
+    },
     CantidadPuntos: {
       type: Sequelize.INTEGER
     },
@@ -7,7 +10,8 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING
     },
     Fecha: {
-      type: Sequelize.DATE
+      type: Sequelize.DATE, allowNull: false,
+      defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
     }
   });
 

@@ -1,5 +1,8 @@
 module.exports = (sequelize, Sequelize) => {
   const Premios = sequelize.define("premios", {
+    id: {
+      type: Sequelize.INTEGER, primaryKey: true
+    },
     Nombre: {
       type: Sequelize.STRING
     },

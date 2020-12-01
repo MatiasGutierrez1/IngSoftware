@@ -14,13 +14,14 @@ exports.create = (req, res) => {
 
   // Create a Tutorial
   const usuarios = {
-    TipoU: req.body.TipoU,
-    Nombre : req.body.Nombre,
-    Rut: req.body.Rut,
-    Clave: req.body.Clave,
-    Telefono: req.body.Telefono,
-    Correo: req.body.Correo,
-    Puntos: req.body.Puntos
+    id: req.body.id,
+    tipoU: req.body.tipoU,
+    nombre : req.body.nombre,
+    rut: req.body.rut,
+    clave: req.body.clave,
+    telefono: req.body.telefono,
+    correo: req.body.correo,
+    puntos: req.body.puntos
   };
 
   // Save Tutorial in the database
@@ -41,14 +42,14 @@ exports.findAll = (req, res) => {
   const user = req.query.user;
   var condition = user ? { user: { [Op.like]: `%${user}%` } } : null;
 
-  Usuarios.findAll({ where: condition })
+  Usuarios.findAll({ where: ['Nombre'] })
     .then(data => {
       res.send(data);
     })
     .catch(err => {
       res.status(500).send({
         message:
-          err.message || "Some error occurred while retrieving usuarios."
+          err.message || "Se produjo un error al recuperar usuarios."
       });
     });
 };

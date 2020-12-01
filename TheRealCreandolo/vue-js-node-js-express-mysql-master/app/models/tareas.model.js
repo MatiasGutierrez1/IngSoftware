@@ -1,5 +1,8 @@
 module.exports = (sequelize, Sequelize) => {
   const Tareas = sequelize.define("tareas", {
+    id:{
+      type: Sequelize.INTEGER, primaryKey: true
+    },
     Nombre: {
       type: Sequelize.STRING
     },

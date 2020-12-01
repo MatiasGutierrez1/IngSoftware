@@ -14,10 +14,11 @@ exports.create = (req, res) => {
 
   // Create a Tutorial
   const premios = {
-    Nombre: req.body.Nombre,
-    Descripcion: req.body.Descripcion,
-    Puntos: req.body.Puntos,
-    Disponibilidad: req.body.Disponibilidad ? req.body.Disponibilidad : false
+    id: req.body.id,
+    nombre: req.body.nombre,
+    descripcion: req.body.descripcion,
+    puntos: req.body.nuntos,
+    disponibilidad: req.body.disponibilidad ? req.body.disponibilidad : false
   };
 
   // Save Tutorial in the database
