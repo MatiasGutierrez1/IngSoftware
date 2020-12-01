@@ -13,7 +13,7 @@
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
         <b-nav-item :to="{name: 'PremiosGestor'}">Premio</b-nav-item>
-        <b-nav-item :to="{name: 'TareasTrabajador'}">Tareas</b-nav-item>
+        <b-nav-item :to="{name: 'TareasGestor'}">Tareas</b-nav-item>
         <b-nav-item :to="{name: 'RankingPlanificador'}">Ranking</b-nav-item>
         <b-nav-item :to="{name: 'PerfilPlanificador'}">Perfil</b-nav-item>
         <b-nav-item :to="{name: 'UsuariosGestor'}">Usuarios</b-nav-item>
