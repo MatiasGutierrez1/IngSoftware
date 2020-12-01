@@ -14,8 +14,8 @@
       <b-navbar-nav>
         <b-nav-item :to="{name: 'PremiosGestor'}">Premio</b-nav-item>
         <b-nav-item :to="{name: 'TareasTrabajador'}">Tareas</b-nav-item>
-        <b-nav-item href="#" disabled>Ranking</b-nav-item>
-        <b-nav-item href="#" disabled>Perfil</b-nav-item>
+        <b-nav-item :to="{name: 'RankingPlanificador'}">Ranking</b-nav-item>
+        <b-nav-item :to="{name: 'PerfilPlanificador'}">Perfil</b-nav-item>
         <b-nav-item :to="{name: 'UsuariosGestor'}">Usuarios</b-nav-item>
         <b-nav-item :to="{name: 'Login'}">Cerrar sesion</b-nav-item>
       </b-navbar-nav>
@@ -29,13 +29,13 @@
   <b-container>
   <div class="py-3 bg-dark text-center">
     <b-row>
-    <div>
-      <button type="button">Agregar usuario</button>
-    </div>
-    <div class="text-center">
-      <input type="text" id="searchterm" placeholder="Nombre" />
-      <button type="button" id="search">Buscar usuario</button>
-    </div>
+      <div>
+        <button type="button" id="search">Agregar Tarea</button>
+      </div>
+      <div>
+        <input type="text" id="searchterm" placeholder="Buscar">
+        <button type="button" id="search">Buscar Tarea</button>
+      </div>
     </b-row>
     <b-row>
       <b-col cols="12" md="2">

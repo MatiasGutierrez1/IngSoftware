@@ -22,47 +22,77 @@
     </b-navbar>
   </div>
 
-  <div class="overflow-auto">
-    <b-pagination
-      v-model="currentPage"
-      :total-rows="rows"
-      :per-page="perPage"
-      aria-controls="my-table"
-    ></b-pagination>
-
-    <p class="mt-3">Pagina Actual: {{ currentPage }}</p>
-
-    <b-table
-      id="my-table"
-      :items="items"
-      :per-page="perPage"
-      :current-page="currentPage"
-      small
-    ></b-table>
-  </div>
+  <b-container>
+  <div class="py-3 bg-dark text-center">
+    <b-row>
+      <b-col cols="12" md="1">
+        <p style="color: white">Trabajador</p>
+      </b-col>
+      <b-col cols="12" md="4">
+        <p style="color: white">Tarea</p>
+      </b-col>
+      <b-col cols="12" md="2">
+        <p style="color: white">Fecha de entrega</p>
+      </b-col>
+      <b-col cols="12" md="3">
+        <p style="color: white">Prioridad</p>
+      </b-col>
+    </b-row>
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <b-col cols="6" md="2">
+          <p>Trabajador</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>Tarea1</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>Fecha de entrega</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>Prioridad</p>
+        </b-col>
+        <button>Entregar</button>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <b-col cols="6" md="2">
+          <p>Trabajador</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>Tarea2</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>Fecha de entrega</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>Prioridad</p>
+        </b-col>
+        <button>Entregar</button>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <b-col cols="6" md="2">
+          <p>Trabajador</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>Tarea1</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>Fecha de entrega</p>
+        </b-col>
+        <b-col cols="6" md="2">
+          <p>Prioridad</p>
+        </b-col>
+        <button>Entregar</button>
+      </li>
+    </ul>
+  </div>  
+  </b-container>
   </body>  
 </template>
 
 <script>
   export default {
-    data() {
-      return {
-        perPage: 10,
-        currentPage: 1,
-        items: [
-          { Tarea: 1, FechaEntrega: '30 de Noviembre', Prioridad: 'Alta'},
-          { Tarea: 2, FechaEntrega: '5 de Diciembre', Prioridad: 'Alta'},
-          { Tarea: 3, FechaEntrega: '7 de Diciembre', Prioridad: 'Media'},
-          { Tarea: 4, FechaEntrega: '15 de Diciembre', Prioridad: 'Media'},
-          { Tarea: 5, FechaEntrega: '22 de Diciembre', Prioridad: 'Media'},
-        ]
-      }
-    },
-    computed: {
-      rows() {
-        return this.items.length
-      }
-    }
+    name: 'TareasTrabajador'
   }
 </script>
 

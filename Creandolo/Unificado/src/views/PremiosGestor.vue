@@ -1,11 +1,37 @@
 <template>
-  <div class="py-3 bg-success text-center">
+
+  <body class="fondo">
+  <img alt="Vue logo" src="./logo.png" class="logo">
+
+  <div>
+    <b-navbar toggleable="lg" type="dark" variant="dark">
+      <b-navbar-brand :to="{name: 'HomeG'}">Home</b-navbar-brand>
+
+      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+      <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-nav>
+          <b-nav-item :to="{name: 'PremiosGestor'}">Premio</b-nav-item>
+          <b-nav-item :to="{name: 'TareasTrabajador'}">Tareas</b-nav-item>
+          <b-nav-item href="#" disabled>Ranking</b-nav-item>
+          <b-nav-item href="#" disabled>Perfil</b-nav-item>
+          <b-nav-item :to="{name: 'UsuariosGestor'}">Usuarios</b-nav-item>
+          <b-nav-item :to="{name: 'Login'}">Cerrar sesion</b-nav-item>
+        </b-navbar-nav>
+
+
+      </b-collapse>
+    </b-navbar>
+  </div>
+
+  <b-container>
+  <div class="py-3 bg-dark text-center">
     <b-row>
       <b-col cols="12" md="7">
-        <p>Nombre</p>
+        <p style="color:white">Nombre</p>
       </b-col>
       <b-col cols="12" md="4">
-        <p>Puntaje requerido</p>
+        <p style="color:white">Puntaje requerido</p>
       </b-col>
     </b-row>
     <ul class="list-group">
@@ -14,7 +40,6 @@
           img-src="https://picsum.photos/600/300/?image=25"
           img-top
           >  
-          <p>Premio</p>
           <b-button variant="info" href="#">Descripción</b-button>
         </b-card>
         <b-col cols="12" md="2">
@@ -31,7 +56,6 @@
           img-src="https://picsum.photos/600/300/?image=25"
           img-top
           >  
-          <p>Premio</p>
           <b-button variant="info" href="#">Descripción</b-button>
         </b-card>
         <b-col cols="12" md="2">
@@ -48,7 +72,6 @@
           img-src="https://picsum.photos/600/300/?image=25"
           img-top
           >  
-          <p>Premio</p>
           <b-button variant="info" href="#">Descripción</b-button>
         </b-card>
         <b-col cols="12" md="2">
@@ -62,6 +85,8 @@
       </li>
     </ul>
   </div>
+  </b-container>
+  </body>
 </template>
 
 <script>
@@ -69,3 +94,28 @@
     name: 'PremiosGestor'
   }
 </script>
+
+<style lang="scss" scoped>
+
+.logo {
+  max-width: 20%;
+  float: left;
+
+}
+.fondo{
+  background-size: 100px 100px;
+  background-size: 100% 100%;
+  background-image: url("backgraund.jpg");
+  background-color: #ffffff;
+}
+
+    table {
+    width: 70%;
+    border-spacing: 0 0;
+    background: #22333f;
+    color: white;
+    border-radius: 5px;
+    overflow: hidden;
+  } 
+  
+</style>
