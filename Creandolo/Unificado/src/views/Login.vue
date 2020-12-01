@@ -24,7 +24,9 @@
     </form>
   </div>
   <div id="nav">
-  <router-link to="/HomeT">Entrar al Home secreto xd</router-link>
+  <router-link to="/HomeT">Entrar al Home secreto Trabajador xd</router-link>
+  <router-link to="/HomeP">Entrar al Home secreto Planificador xd</router-link>
+  <router-link to="/HomeG">Entrar al Home secreto Gestor xd</router-link>
   </div>
 </body>
 </template>
