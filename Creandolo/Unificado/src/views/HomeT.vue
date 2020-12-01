@@ -4,6 +4,7 @@
 <img alt="Vue logo" src="./logo.png" class="logo">
 
 <div>
+  <b-container>
   <b-navbar toggleable="lg" type="dark" variant="dark">
     <b-navbar-brand :to="{name: 'HomeT'}">Home</b-navbar-brand>
 
@@ -14,19 +15,17 @@
         <b-nav-item :to="{name: 'PremiosTrabajador'}">Premio</b-nav-item>
         <b-nav-item :to="{name: 'TareasTrabajador'}">Tareas</b-nav-item>
         <b-nav-item :to="{name: 'RankingTrabajador'}">Ranking</b-nav-item>
-        <b-nav-item href="#" disabled>Perfil</b-nav-item>
+        <b-nav-item :to="{name: 'PerfilTrabajador'}">Perfil</b-nav-item>
         <b-nav-item :to="{name: 'Login'}">Cerrar sesion</b-nav-item>
       </b-navbar-nav>
 
 
     </b-collapse>
   </b-navbar>
+  </b-container>
 </div>
 
 
-
-
-<p v-if="userLogged">User loggued: {{userLogged}}</p>
 
 
 </body>

@@ -24,29 +24,48 @@
     </form>
   </div>
   <div id="nav">
-  <router-link to="/HomeT">Entrar al Home secreto xd</router-link>
+  <router-link to="/HomeT">Entrar al Home secreto Trabajador xd</router-link>
+  <router-link to="/HomeP">Entrar al Home secreto Planificador xd</router-link>
+  <router-link to="/HomeG">Entrar al Home secreto Gestor xd</router-link>
   </div>
 </body>
 </template>
 
 <script>
+import auth from "@/logic/auth";
 export default {
   data: () => ({
     email: "",
     password: "",
+    tipo:"",
     error: false
   }),
   methods: {
-    login() {
-      console.log(this.email);
-      console.log(this.password);
+    async login() {
+      try {
+        await auth.login(this.email, this.password);
+        if(this.tipo === "trabajador") {
+          this.$router.push("/HomeT");
+        }
+        if(this.tipo === "planificador") {
+          this.$router.push("/HomeP");
+        }
+        if(this.tipo === "gestor") {
+          this.$router.push("/HomeG");
+        }
+
+      } catch (error) {
+        this.error = true;
+      }
     }
   }
 };
 
-
-
 </script>
+
+
+
+
 
 <style lang="scss" scoped>
 

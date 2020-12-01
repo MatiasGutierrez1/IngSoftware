@@ -4,6 +4,7 @@
   <img alt="Vue logo" src="./logo.png" class="logo">
 
   <div>
+    <b-container>
     <b-navbar toggleable="lg" type="dark" variant="dark">
       <b-navbar-brand :to="{name: 'HomeT'}">Home</b-navbar-brand>
 
@@ -14,12 +15,13 @@
           <b-nav-item :to="{name: 'PremiosTrabajador'}">Premio</b-nav-item>
           <b-nav-item :to="{name: 'TareasTrabajador'}">Tareas</b-nav-item>
           <b-nav-item :to="{name: 'RankingTrabajador'}">Ranking</b-nav-item>
-          <b-nav-item :to="{name: 'PerfilTrabajador'}">Perfil</b-nav-item>
+          <b-nav-item href="#" disabled>Perfil</b-nav-item>
           <b-nav-item :to="{name: 'Login'}">Cerrar sesion</b-nav-item>
         </b-navbar-nav>
 
       </b-collapse>
     </b-navbar>
+    </b-container>
   </div>
 
   <div class="overflow-auto">
@@ -37,8 +39,8 @@
       :items="items"
       :per-page="perPage"
       :current-page="currentPage"
-      small
-    ></b-table>
+      small 
+    ></b-table> 
   </div>
   </body>  
 </template>
@@ -80,13 +82,13 @@
   background-color: #ffffff;
 }
 
-  table {
+    table {
     width: 70%;
     border-spacing: 0 0;
     background: #22333f;
     color: white;
     border-radius: 5px;
     overflow: hidden;
-  }
+  } 
   
 </style>

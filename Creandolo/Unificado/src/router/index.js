@@ -72,7 +72,24 @@ const routes = [
     path: '/RankingPlanificador',
     name: 'RankingPlanificador',
     component: () => import('../views/RankingPlanificador.vue')
-  }
+  },
+  {
+    path: '/PerfilTrabajador',
+    name: 'PerfilTrabajador',
+    component: () => import('../views/PerfilTrabajador.vue')
+  },
+  {
+    path: '/PerfilPlanificador',
+    name: 'PerfilPlanificador',
+    component: () => import('../views/PerfilPlanificador.vue')
+  },
+  {
+    path: '/PerfilGestor',
+    name: 'PerfilGestor',
+    component: () => import('../views/PerfilGestor.vue')
+  },
+  
+  
 ]
 
 const router = new VueRouter({
