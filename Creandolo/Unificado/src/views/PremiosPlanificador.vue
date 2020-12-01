@@ -4,34 +4,35 @@
   <img alt="Vue logo" src="./logo.png" class="logo">
 
   <div>
+    <b-container>
     <b-navbar toggleable="lg" type="dark" variant="dark">
-      <b-navbar-brand :to="{name: 'HomeG'}">Home</b-navbar-brand>
+      <b-navbar-brand :to="{name: 'HomeT'}">Home</b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item :to="{name: 'PremiosGestor'}">Premio</b-nav-item>
-          <b-nav-item :to="{name: 'TareasGestor'}">Tareas</b-nav-item>
-          <b-nav-item :to="{name: 'RankingGestor'}">Ranking</b-nav-item>
-          <b-nav-item :to="{name: 'PerfilGestor'}">Perfil</b-nav-item>
-          <b-nav-item :to="{name: 'UsuariosGestor'}">Usuarios</b-nav-item>
-          <b-nav-item :to="{name: 'Login'}">Cerrar sesion</b-nav-item>
-        </b-navbar-nav>
-
+        <b-nav-item :to="{name: 'PremiosPlanificador'}">Premio</b-nav-item>
+        <b-nav-item :to="{name: 'TareasPlanificador'}">Tareas</b-nav-item>
+        <b-nav-item :to="{name: 'RankingPlanificador'}">Ranking</b-nav-item>
+        <b-nav-item :to="{name: 'PerfilPlanificador'}">Perfil</b-nav-item>
+        <b-nav-item :to="{name: 'UsuariosPlanificador'}">Usuarios</b-nav-item>
+        <b-nav-item :to="{name: 'Login'}">Cerrar sesion</b-nav-item>
+      </b-navbar-nav>
 
       </b-collapse>
     </b-navbar>
+    </b-container>
   </div>
 
   <b-container>
   <div class="py-3 bg-dark text-center">
     <b-row>
-      <b-col cols="12" md="7">
-        <p style="color:white">Nombre</p>
+      <b-col cols="12" md="8">
+        <p style="color: white">Nombre</p>
       </b-col>
-      <b-col cols="12" md="4">
-        <p style="color:white">Puntaje requerido</p>
+      <b-col cols="12" md="1">
+        <p style="color: white">Puntaje requerido</p>
       </b-col>
     </b-row>
     <ul class="list-group">
@@ -48,8 +49,7 @@
         <b-col cols="12" md="4">
           <p>800</p>
         </b-col>
-        <button>Modificar</button>
-        <button>Eliminar</button>
+        <button>Canjear</button>
       </li>
       <li class="list-group-item d-flex justify-content-between align-items-center">
         <b-card 
@@ -64,8 +64,7 @@
         <b-col cols="12" md="4">
           <p>450</p>
         </b-col>
-        <button>Modificar</button>
-        <button>Eliminar</button>
+        <button>Canjear</button>
       </li>
       <li class="list-group-item d-flex justify-content-between align-items-center">
         <b-card 
@@ -80,8 +79,7 @@
         <b-col cols="12" md="4">
           <p>300</p>
         </b-col>
-        <button>Modificar</button>
-        <button>Eliminar</button>
+        <button>Canjear</button>
       </li>
     </ul>
   </div>
@@ -91,7 +89,7 @@
 
 <script>
   export default {
-    name: 'PremiosGestor'
+    name: 'PremiosTrabajador'
   }
 </script>
 

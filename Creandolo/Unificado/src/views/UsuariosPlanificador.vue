@@ -12,10 +12,10 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-        <b-nav-item :to="{name: 'PremiosTrabajador'}">Premio</b-nav-item>
+        <b-nav-item :to="{name: 'PremiosPlanificador'}">Premio</b-nav-item>
         <b-nav-item :to="{name: 'TareasPlanificador'}">Tareas</b-nav-item>
         <b-nav-item :to="{name: 'RankingPlanificador'}">Ranking</b-nav-item>
-        <b-nav-item href="#" disabled>Perfil</b-nav-item>
+        <b-nav-item :to="{name: 'PerfilPlanificador'}">Perfil</b-nav-item>
         <b-nav-item :to="{name: 'UsuariosPlanificador'}">Usuarios</b-nav-item>
         <b-nav-item :to="{name: 'Login'}">Cerrar sesion</b-nav-item>
       </b-navbar-nav>
@@ -116,3 +116,4 @@
   } 
   
 </style>
+

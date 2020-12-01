@@ -12,8 +12,8 @@
         <b-navbar-nav>
           <b-nav-item :to="{name: 'PremiosGestor'}">Premio</b-nav-item>
           <b-nav-item :to="{name: 'TareasTrabajador'}">Tareas</b-nav-item>
-          <b-nav-item href="#" disabled>Ranking</b-nav-item>
-          <b-nav-item href="#" disabled>Perfil</b-nav-item>
+          <b-nav-item :to="{name: 'RankingGestor'}">Ranking</b-nav-item>
+          <b-nav-item :to="{name: 'PerfilGestor'}">Perfil</b-nav-item>
           <b-nav-item :to="{name: 'UsuariosGestor'}">Usuarios</b-nav-item>
           <b-nav-item :to="{name: 'Login'}">Cerrar sesion</b-nav-item>
         </b-navbar-nav>
@@ -29,65 +29,65 @@
       <div>
         <button type="button" id="search">Agregar Tarea</button>
       </div>
-      <div>
+      <div style = "text-align: center;">
         <input type="text" id="searchterm" placeholder="Buscar">
         <button type="button" id="search">Buscar Tarea</button>
       </div>
     </b-row>
     <b-row>
-      <b-col cols="12" md="3">
+      <b-col cols="12" md="5">
         <p style="color:white">Usuarios</p>
       </b-col>
-      <b-col cols="12" md="5">
+      <b-col cols="12" md="3">
         <p style="color:white">Puntajes</p>
       </b-col>
     </b-row>
     <ul class="list-group">
       <li class="list-group-item d-flex justify-content-between align-items-center">
-        <b-col cols="12" md="2">
+        <b-col cols="12" md="4">
           <p>Trabajador 1</p>
         </b-col>
-        <b-col cols="12" md="4">
+        <b-col cols="12" md="2">
           <p>5000</p>
         </b-col>
         <button>Modificar</button>
         <button>Eliminar</button>
       </li>
       <li class="list-group-item d-flex justify-content-between align-items-center">
-        <b-col cols="12" md="2">
+        <b-col cols="12" md="4">
           <p>Trabajador 2</p>
         </b-col>
-        <b-col cols="12" md="4">
+        <b-col cols="12" md="2">
           <p>4630</p>
         </b-col>
         <button>Modificar</button>
         <button>Eliminar</button> 
       </li>
       <li class="list-group-item d-flex justify-content-between align-items-center">
-        <b-col cols="12" md="2">
+        <b-col cols="12" md="4">
           <p>Trabajador 3</p>
         </b-col>
-        <b-col cols="12" md="4">
+        <b-col cols="12" md="2">
           <p>4450</p>
         </b-col>
         <button>Modificar</button>
         <button>Eliminar</button>
       </li>
       <li class="list-group-item d-flex justify-content-between align-items-center">
-        <b-col cols="12" md="2">
+        <b-col cols="12" md="4">
           <p>Trabajador 4</p>
         </b-col>
-        <b-col cols="12" md="4">
+        <b-col cols="12" md="2">
           <p>4110</p>
         </b-col>
         <button>Modificar</button>
         <button>Eliminar</button>
       </li>
       <li class="list-group-item d-flex justify-content-between align-items-center">
-        <b-col cols="12" md="2">
+        <b-col cols="12" md="4">
           <p>Trabajador 5</p>
         </b-col>
-        <b-col cols="12" md="4">
+        <b-col cols="12" md="2">
           <p>3800</p>
         </b-col>
         <button>Modificar</button>
