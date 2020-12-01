@@ -1,5 +1,5 @@
 module.exports = app => {
-  const usuarios = require("../controllers/premios.controller.js");
+  const usuarios = require("../controllers/usuarios.controller.js");
 
   var router = require("express").Router();
 
@@ -10,7 +10,7 @@ module.exports = app => {
   router.get("/", usuarios.findAll);
 
   // Retrieve all published Tutorials
-  router.get("/published", usuarios.findAllPublished);
+  router.get("/", usuarios.findAllPublished);
 
   // Retrieve a single Tutorial with id
   router.get("/:id", usuarios.findOne);

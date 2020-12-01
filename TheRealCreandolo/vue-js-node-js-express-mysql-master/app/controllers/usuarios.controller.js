@@ -1,6 +1,16 @@
 const db = require("../models");
 const Usuarios = db.usuarios;
-const Op = db.Sequelize.Op;
+const Op = db.Sequelize.
+
+
+exports.login = async (req,res) => {
+  try {
+    const { email, password}=req.body;
+  }
+  await db.query('SELECT * FROM usuarios WHERE email = ?', [email])
+};
+
+
 
 // Create and Save a new Tutorial
 exports.create = (req, res) => {
@@ -14,6 +24,7 @@ exports.create = (req, res) => {
 
   // Create a Tutorial
   const usuarios = {
+
     tipoU: req.body.tipoU,
     nombre : req.body.nombre,
     rut: req.body.rut,
@@ -41,7 +52,7 @@ exports.findAll = (req, res) => {
   const user = req.query.user;
   var condition = user ? { user: { [Op.like]: `%${user}%` } } : null;
 
-  Usuarios.findAll({ where: ['Nombre'] })
+  Usuarios.findAll({ where: ['nombre'] })
     .then(data => {
       res.send(data);
     })
