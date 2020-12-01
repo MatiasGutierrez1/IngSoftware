@@ -30,23 +30,40 @@
 </template>
 
 <script>
+import auth from "@/logic/auth";
 export default {
   data: () => ({
     email: "",
     password: "",
+    tipo:"",
     error: false
   }),
   methods: {
-    login() {
-      console.log(this.email);
-      console.log(this.password);
+    async login() {
+      try {
+        await auth.login(this.email, this.password);
+        if(this.tipo === "trabajador") {
+          this.$router.push("/HomeT");
+        }
+        if(this.tipo === "planificador") {
+          this.$router.push("/HomeP");
+        }
+        if(this.tipo === "gestor") {
+          this.$router.push("/HomeG");
+        }
+
+      } catch (error) {
+        this.error = true;
+      }
     }
   }
 };
 
-
-
 </script>
+
+
+
+
 
 <style lang="scss" scoped>
 
