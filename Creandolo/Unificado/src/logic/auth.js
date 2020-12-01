@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const ENDPOINT_PATH = "https://reqres.in/api/";
+const ENDPOINT_PATH = "http://localhost:8080/";
 
 export default {
   login(email, password) {

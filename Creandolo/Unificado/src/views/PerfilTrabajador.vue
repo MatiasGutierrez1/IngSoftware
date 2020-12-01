@@ -25,6 +25,48 @@
   </b-container>
 </div>
 
+   <div class="row">
+     <form  class="form-horizontal form-material">
+       <div class="form-group">
+         <label class="col-md-12">Nombre</label>
+           <div class="col-md-12">
+             <input type="text" class="form-control form-control-line"
+               v-model="user.name">
+             </div>
+           </div>
+           <div class="form-group">
+             <label class="col-md-12">Apellido</label>
+               <div class="col-md-12">
+                 <input type="text" class="form-control form-control-line"
+                   v-model="user.lastname">
+               </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-12">Genero</label>
+              <div class="col-sm-12">
+                <select class="form-control form-control-line">
+                  <option>Femenino</option>
+                  <option>Masculino</option>
+                  <option>Otra orientación</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-12">Sobre mi</label>
+              <div class="col-md-12">
+                <textarea rows="5" class="form-control form-control-line"
+                 v-model="user.description">
+                </textarea>
+              </div>
+            </div>
+          <div class="col-sm-12">
+            <button class="btn btn-success" 
+              v-on:click="editUser()">Actualizar
+            </button>
+          </div>
+      </form>
+    </div>
+
 
 </body>
 </template>
